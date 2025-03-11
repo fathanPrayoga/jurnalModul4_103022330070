@@ -12,7 +12,7 @@ class kodeProduk
         { "Smartphone", "E101" },
         { "Tablet", "E102" },
         { "Headset", "E103" },
-        { "Keyboard", "E104" },
+        { "Keyboard", "E104" }, 
         { "Mouse", "E1O5" },
         { "Printer", "E106" },
         { "Monitor", "E107" },
@@ -26,6 +26,63 @@ class kodeProduk
     }
 
 
+    
+}
+
+public enum Fanstate
+{
+    Quiet,
+    Turbo,
+    Balanced,
+    performance
+}
+public enum Trigger
+{
+    ModeDown,
+    ModeUp,
+    TurboShortcut
+}
+
+public class FanLaptop
+{
+    private Fanstate _state = Fanstate.Quiet;
+
+    public class Transisi
+    {
+        Fanstate Awal;
+        Fanstate Akhir;
+        Fanstate Trigger;
+
+        public Transisi(Fanstate awal, Fanstate akhir, Fanstate trigger)
+        {
+            Awal = awal;
+            Akhir = akhir;
+            Trigger = trigger;
+        }
+    }
+    public FanLaptop()
+    {
+        _state = Fanstate.Quiet;
+        Console.WriteLine("Quite mode");
+    }
+
+    public void TurboShortcut()
+    {
+        if (_state == Fanstate.Quiet)
+        {
+
+        }
+    }
+    public void BalancedShortcut()
+    {
+
+    }
+    public void performanceShortcut() { 
+    
+    }
+    public void TriggerShortcut() { 
+    
+    }
     
 }
 
